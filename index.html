@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parisian Driver – Chauffeur privé VTC en Île-de-France</title>
+<meta name="description" content="Chauffeur privé VTC à Paris et en Île-de-France. Le même chauffeur à chaque trajet, zéro annulation. Réservation directe, sans intermédiaire.">
+<meta name="theme-color" content="#0E0F11">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E0F11'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%239BB4D8'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Parisian Driver – Chauffeur privé VTC en Île-de-France">
+<meta property="og:description" content="Le même chauffeur de confiance à chaque trajet, zéro annulation. Réservation directe, sans intermédiaire.">
+<meta property="og:image" content="assets/hero-paris-nuit.jpg">
+<meta property="og:locale" content="fr_FR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- ── Header ─────────────────────────────────────────── -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <button type="button" class="brand" data-go="accueil" aria-label="Retour en haut">
+        <span class="brand-name">Parisian Driver</span>
+        <span class="brand-dot"></span>
+      </button>
+
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <button type="button" class="nav-link" data-go="services">Services<span class="nav-bar"></span></button>
+        <button type="button" class="nav-link" data-go="vehicule">Véhicule<span class="nav-bar"></span></button>
+        <button type="button" class="nav-link" data-go="evenementiel">Événementiel<span class="nav-bar"></span></button>
+        <button type="button" class="nav-link" data-go="tarifs">Tarifs<span class="nav-bar"></span></button>
+        <button type="button" class="nav-link" data-go="reservation">Réservation<span class="nav-bar"></span></button>
+        <button type="button" class="nav-link" data-go="contact">Contact<span class="nav-bar"></span></button>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+33695505901" class="btn-phone desktop-only">06 95 50 59 01</a>
+        <button type="button" class="btn-primary btn-sm" data-go="reservation">Réserver</button>
+        <a href="tel:+33695505901" class="btn-appel mobile-only" aria-label="Appeler le 06 95 50 59 01">Appel</a>
+      </div>
+    </div>
+
+    <div class="nav-rail mobile-only" id="nav-rail">
+      <div class="nav-rail-track">
+        <button type="button" class="rail-link" data-nav="accueil" data-go="accueil">Accueil</button>
+        <button type="button" class="rail-link" data-nav="services" data-go="services">Services</button>
+        <button type="button" class="rail-link" data-nav="vehicule" data-go="vehicule">Véhicule</button>
+        <button type="button" class="rail-link" data-nav="evenementiel" data-go="evenementiel">Événementiel</button>
+        <button type="button" class="rail-link" data-nav="tarifs" data-go="tarifs">Tarifs</button>
+        <button type="button" class="rail-link" data-nav="reservation" data-go="reservation">Réservation</button>
+        <button type="button" class="rail-link" data-nav="contact" data-go="contact">Contact</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ───────────────────────────────────────────── -->
+  <section id="accueil" class="hero" data-screen-label="Hero">
+    <div class="hero-backdrop" aria-hidden="true">
+      <div class="hero-photo" style="background-image:url('assets/hero-paris-nuit.jpg')"></div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow-row">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow">Chauffeur privé VTC · Île-de-France</span>
+        </div>
+        <h1>Le même chauffeur de confiance, à chaque trajet.</h1>
+        <p class="hero-lead">Chauffeur privé VTC en Île-de-France : transferts aéroport et gare, longue distance, événementiel. Réservé directement, sans jamais craindre l'annulation de dernière minute.</p>
+        <div class="hero-cta">
+          <button type="button" class="btn-primary" data-go="reservation">Réserver ma course →</button>
+          <a href="https://wa.me/33695505901" target="_blank" rel="noopener" class="btn-outline">Écrire sur WhatsApp</a>
+        </div>
+        <div class="hero-facts">
+          <div class="fact">
+            <div class="fact-num">01</div>
+            <div class="fact-title">Zéro annulation</div>
+            <p>Engagement formalisé, pas un argument.</p>
+          </div>
+          <div class="fact">
+            <div class="fact-num">02</div>
+            <div class="fact-title">Un chauffeur, une relation</div>
+            <p>Vous savez qui viendra vous chercher.</p>
+          </div>
+          <div class="fact">
+            <div class="fact-num">03</div>
+            <div class="fact-title">Réservation directe</div>
+            <p>Par le site ou WhatsApp, sans intermédiaire.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services ───────────────────────────────────────── -->
+  <section id="services" class="section" data-screen-label="Services">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="kicker">Services</div>
+          <h2>Un chauffeur, plusieurs façons de voyager sereinement</h2>
+        </div>
+        <p class="section-head-p">Prise en charge à l'heure convenue, prix connu à l'avance, un interlocuteur unique du premier appel au dernier kilomètre.</p>
+      </div>
+
+      <div class="grid-cards">
+        <article class="card">
+          <div class="card-num">01</div>
+          <h3>Transferts aéroport &amp; gare</h3>
+          <p>Un vol tôt le matin, une correspondance serrée : vous n'avez pas le droit à l'erreur, nous non plus. Prise en charge à l'heure convenue, suivi de vol pour anticiper les retards, prix fixe connu à l'avance.</p>
+          <div class="card-meta">Roissy · Orly · gares parisiennes</div>
+        </article>
+        <article class="card">
+          <div class="card-num">02</div>
+          <h3>Mise à disposition</h3>
+          <p>Une journée de rendez-vous à enchaîner, une visite avec plusieurs arrêts : le véhicule et le chauffeur restent à votre disposition aussi longtemps que nécessaire, sans stress d'organisation.</p>
+          <div class="card-meta">À l'heure · à la demi-journée</div>
+        </article>
+        <article class="card">
+          <div class="card-num">03</div>
+          <h3>Longue distance &amp; intervilles</h3>
+          <p>Depuis l'Île-de-France vers n'importe quelle destination en France : Normandie, Champagne, et au-delà. Un trajet confortable, sans changement, avec un chauffeur qui connaît la route.</p>
+          <div class="card-meta">Toute la France</div>
+        </article>
+        <article class="card">
+          <div class="card-num">04</div>
+          <h3>Événementiel</h3>
+          <p>Mariages, soirées, réceptions : un chauffeur dédié pour que le jour J se déroule sans imprévu.</p>
+          <button type="button" class="link-arrow" data-go="evenementiel">Voir en détail →</button>
+        </article>
+      </div>
+
+      <div class="onboard-note">
+        <span class="onboard-tag">À bord</span>
+        <span>Eau, boissons et presse à bord. Réhausseur, siège bébé et bagages volumineux sur simple demande.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Véhicule ───────────────────────────────────────── -->
+  <section id="vehicule" class="section" data-screen-label="Véhicule">
+    <div class="container grid-2">
+      <div class="veh-gallery">
+        <div class="veh-tile veh-tile-wide"><span>Toyota Camry · 3/4 avant</span></div>
+        <div class="veh-tile"><span>Intérieur cuir</span></div>
+        <div class="veh-tile"><span>Attentions à bord</span></div>
+      </div>
+
+      <div>
+        <div class="kicker">Le véhicule</div>
+        <h2>Confortable, discrète, toujours la même.</h2>
+        <p class="lead">Une Toyota Camry, confortable et discrète : sièges cuir, climatisation, chargeurs à disposition. Jusqu'à 3-4 passagers, avec la place nécessaire pour les bagages.</p>
+        <p class="lead">Réhausseur, siège bébé et bagages volumineux fournis sur simple demande, pas besoin d'improviser au dernier moment.</p>
+        <dl class="spec-list">
+          <div class="spec-row"><dt>Modèle</dt><dd>Toyota Camry</dd></div>
+          <div class="spec-row"><dt>Passagers</dt><dd>Jusqu'à 4</dd></div>
+          <div class="spec-row"><dt>Confort</dt><dd>Cuir · climatisation · chargeurs</dd></div>
+          <div class="spec-row"><dt>Sur demande</dt><dd>Réhausseur · siège bébé</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Zone de couverture ─────────────────────────────── -->
+  <section id="zone" class="section" data-screen-label="Zone de couverture">
+    <div class="container grid-2 grid-2-center">
+      <div>
+        <div class="kicker">Zone de couverture</div>
+        <h2>Où nous intervenons</h2>
+        <p class="lead">La prise en charge se fait en Île-de-France. Une fois à bord, la destination n'a pas de limite : Paris et sa région bien sûr, mais aussi partout ailleurs en France pour vos trajets longue distance, de la Normandie à la Champagne et au-delà.</p>
+        <button type="button" class="link-arrow" data-go="contact">Une destination particulière ? Contactez-nous pour un devis →</button>
+      </div>
+      <div class="zone-card">
+        <div class="zone-row">
+          <span class="zone-label">Prise en charge</span>
+          <span class="zone-value">Île-de-France</span>
+        </div>
+        <div class="hr"></div>
+        <div class="zone-row">
+          <span class="zone-label">Destination</span>
+          <span class="zone-value">Partout en France</span>
+        </div>
+        <div class="chips">
+          <span class="chip">Roissy CDG</span>
+          <span class="chip">Orly</span>
+          <span class="chip">Beauvais</span>
+          <span class="chip">Gare de Lyon</span>
+          <span class="chip">Gare du Nord</span>
+          <span class="chip">Normandie</span>
+          <span class="chip">Champagne</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Événementiel ───────────────────────────────────── -->
+  <section id="evenementiel" class="section section-event" data-screen-label="Événementiel">
+    <div class="container grid-2 grid-2-center">
+      <div class="event-photo" style="background-image:url('assets/hero-paris-nuit.jpg')" role="img" aria-label="Ambiance nocturne parisienne"></div>
+      <div>
+        <div class="kicker kicker-light">Événementiel</div>
+        <h2>Le jour J, un souci de moins</h2>
+        <p class="lead lead-light">Un mariage, une soirée d'entreprise, une réception ne se réservent pas à la dernière minute ; un chauffeur non plus ne devrait pas être un pari. Parisian Driver s'occupe du transport de A à Z : les mariés de la mairie à la réception, une navette pour les invités, ou une mise à disposition sur toute la durée de l'événement.</p>
+        <p class="lead lead-light">Ponctuel, discret, habillé pour l'occasion, et surtout présent : l'engagement de zéro annulation prend tout son sens un jour où il ne peut pas y avoir de plan B.</p>
+        <div class="chips chips-light">
+          <span class="chip chip-light">Mariages</span>
+          <span class="chip chip-light">Soirées d'entreprise</span>
+          <span class="chip chip-light">Réceptions</span>
+        </div>
+        <button type="button" class="btn-primary btn-on-navy" data-go="contact">Demander un devis événementiel →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tarifs ─────────────────────────────────────────── -->
+  <section id="tarifs" class="section" data-screen-label="Tarifs">
+    <div class="container">
+      <div class="section-head section-head-line">
+        <div class="section-head-left">
+          <div class="kicker">Tarifs</div>
+          <h2>Un prix connu avant de monter</h2>
+        </div>
+      </div>
+
+      <div class="grid-price">
+        <div class="price-cell">
+          <div class="price-title">Transfert aéroport / gare</div>
+          <div class="price-value">Sur devis</div>
+          <p>Prix fixe communiqué à la réservation. Suivi de vol, 45 min d'attente incluses.</p>
+        </div>
+        <div class="price-cell">
+          <div class="price-title">Mise à disposition</div>
+          <div class="price-value">Sur devis</div>
+          <p>Facturation à l'heure ou à la demi-journée, arrêts illimités dans la zone.</p>
+        </div>
+        <div class="price-cell">
+          <div class="price-title">Longue distance &amp; événementiel</div>
+          <div class="price-value">Sur devis</div>
+          <p>Étudié selon le trajet, la durée et le nombre de passagers.</p>
+        </div>
+      </div>
+
+      <div class="terms">
+        <div class="term">
+          <div class="term-label">Acompte</div>
+          <p>20 % à la réservation en ligne, le solde après la course. Ou réservation sans acompte en nous contactant directement.</p>
+        </div>
+        <div class="term">
+          <div class="term-label">Délai minimum</div>
+          <p>2 h du jeudi au dimanche, 24 h du lundi au mercredi. Pour l'événementiel, le plus tôt possible.</p>
+        </div>
+        <div class="term">
+          <div class="term-label">Annulation</div>
+          <p>Remboursement intégral au-delà de 24 h avant la course. En dessous, abattement de 20 %.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Réservation ────────────────────────────────────── -->
+  <section id="reservation" class="section" data-screen-label="Réservation">
+    <div class="container grid-2 grid-2-top">
+      <div>
+        <div class="kicker">Réservation</div>
+        <h2>Réservez en direct, en deux minutes</h2>
+        <p class="lead">Pas d'application, pas d'algorithme : votre demande arrive directement au chauffeur, qui confirme lui-même. Vous recevez le prix et la confirmation avant tout paiement.</p>
+        <div class="steps">
+          <div class="step"><span class="step-num">01</span><span>Vous décrivez le trajet</span></div>
+          <div class="step"><span class="step-num">02</span><span>Le prix s'affiche, l'acompte est de 20 %</span></div>
+          <div class="step"><span class="step-num">03</span><span>Confirmation du chauffeur par SMS et email</span></div>
+        </div>
+      </div>
+
+      <div class="form-panel">
+        <!-- Step 1: form -->
+        <form id="booking-form" class="booking-step" novalidate>
+          <div class="panel-head">
+            <span class="panel-title">Votre course</span>
+            <span class="panel-step">Étape 1 / 2</span>
+          </div>
+          <div class="field-grid">
+            <label class="field">
+              <span class="field-label">Prestation</span>
+              <select name="type" id="b-type">
+                <option>Transfert aéroport &amp; gare</option>
+                <option>Mise à disposition</option>
+                <option>Longue distance &amp; intervilles</option>
+                <option>Événementiel</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Adresse de départ</span>
+              <input name="from" id="b-from" placeholder="12 rue de Rivoli, Paris 1er" required>
+            </label>
+            <label class="field">
+              <span class="field-label">Destination</span>
+              <input name="to" id="b-to" placeholder="Aéroport Roissy CDG, terminal 2E" required>
+            </label>
+            <div class="field-row-3">
+              <label class="field">
+                <span class="field-label">Date</span>
+                <input type="date" name="date" id="b-date" required>
+              </label>
+              <label class="field">
+                <span class="field-label">Heure</span>
+                <input type="time" name="time" id="b-time" required>
+              </label>
+              <label class="field">
+                <span class="field-label">Passagers</span>
+                <select name="pax" id="b-pax">
+                  <option>1</option><option selected>2</option><option>3</option><option>4</option>
+                </select>
+              </label>
+            </div>
+            <label class="field">
+              <span class="field-label">Précisions (facultatif)</span>
+              <input name="note" id="b-note" placeholder="Siège bébé, 3 valises, n° de vol…">
+            </label>
+          </div>
+          <button type="submit" class="btn-primary btn-block" id="b-submit">Voir le récapitulatif →</button>
+          <p class="form-hint" id="b-hint">Renseignez le départ, la destination, la date et l'heure pour continuer.</p>
+        </form>
+
+        <!-- Step 2: recap -->
+        <div class="booking-step hidden" id="booking-recap">
+          <div class="panel-head">
+            <span class="panel-title">Récapitulatif</span>
+            <span class="panel-step">Étape 2 / 2</span>
+          </div>
+          <div class="recap-list">
+            <div class="recap-row"><span class="recap-k">Prestation</span><span class="recap-v" id="r-type"></span></div>
+            <div class="recap-row"><span class="recap-k">Trajet</span><span class="recap-v" id="r-route"></span></div>
+            <div class="recap-row"><span class="recap-k">Départ</span><span class="recap-v" id="r-when"></span></div>
+            <div class="recap-row"><span class="recap-k">Passagers</span><span class="recap-v" id="r-pax"></span></div>
+            <div class="recap-row"><span class="recap-k">Précisions</span><span class="recap-v" id="r-note"></span></div>
+          </div>
+          <div class="recap-price">
+            <div class="recap-price-top">
+              <span>Prix de la course</span>
+              <span class="recap-price-val">Sur devis</span>
+            </div>
+            <p>Le prix exact vous est communiqué par le chauffeur sous 2 h, avant tout paiement.</p>
+            <div class="hr hr-sm"></div>
+            <div class="recap-acompte">
+              <span>Acompte à la réservation</span>
+              <span class="recap-acompte-v">20 %</span>
+            </div>
+          </div>
+          <button type="button" class="btn-primary btn-block" id="b-confirm">Confirmer ma demande</button>
+          <button type="button" class="btn-ghost btn-block" data-booking-back>Modifier</button>
+        </div>
+
+        <!-- Step 3: done -->
+        <div class="booking-step hidden" id="booking-done">
+          <div class="check-mark">✓</div>
+          <div class="done-title">Demande envoyée</div>
+          <p class="done-p">Le chauffeur vous confirme personnellement sous 2 h par SMS et email, avec le prix définitif et le lien de paiement de l'acompte.</p>
+          <div class="ref-row">
+            <span class="recap-k">Référence</span>
+            <span class="ref-value" id="b-ref"></span>
+          </div>
+          <button type="button" class="link-arrow" data-booking-back>Nouvelle réservation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── À propos ───────────────────────────────────────── -->
+  <section id="apropos" class="section" data-screen-label="À propos">
+    <div class="container">
+      <div class="about-head">
+        <div>
+          <div class="kicker">À propos</div>
+          <h2>Pourquoi Parisian Driver</h2>
+        </div>
+        <div>
+          <p class="lead">Beaucoup de VTC promettent le confort et la discrétion : c'est le minimum. Ce qui change vraiment, c'est ce qui se passe <em>avant</em> la course : pas d'algorithme, pas de chauffeur différent à chaque fois, pas d'annulation de dernière minute parce qu'une autre course paie mieux ailleurs.</p>
+          <p class="lead">Avec Parisian Driver, vous réservez directement, vous savez qui viendra vous chercher, et vous savez qu'il sera là. C'est une relation qui se construit course après course, pas une transaction anonyme sur une application.</p>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-cell">
+          <div class="about-title">Zéro annulation</div>
+          <p>Engagement formalisé, pas un argument marketing.</p>
+        </div>
+        <div class="about-cell">
+          <div class="about-title">Un chauffeur, une relation</div>
+          <p>Pas de roulette russe à chaque réservation.</p>
+        </div>
+        <div class="about-cell">
+          <div class="about-title">Réservation directe</div>
+          <p>Par le site ou WhatsApp, sans intermédiaire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ────────────────────────────────────────── -->
+  <section id="contact" class="section" data-screen-label="Contact">
+    <div class="container grid-2 grid-2-top">
+      <div>
+        <div class="kicker">Contact</div>
+        <h2>Un devis, une question, un événement</h2>
+        <p class="lead">Pour tout ce qui ne rentre pas dans le formulaire de réservation : devis événementiel, trajet sur mesure, mise à disposition longue durée.</p>
+        <dl class="spec-list">
+          <div class="spec-row"><dt>Téléphone</dt><dd><a href="tel:+33695505901">06 95 50 59 01</a></dd></div>
+          <div class="spec-row"><dt>WhatsApp</dt><dd><a href="https://wa.me/33695505901" target="_blank" rel="noopener">Écrire un message</a></dd></div>
+          <div class="spec-row"><dt>Email</dt><dd><a href="mailto:contact@parisiandriver.fr">contact@parisiandriver.fr</a></dd></div>
+          <div class="spec-row"><dt>Délai mini</dt><dd>2 h jeu. à dim. · 24 h lun. à mer.</dd></div>
+        </dl>
+      </div>
+
+      <div class="form-panel">
+        <form id="contact-form" class="contact-step" novalidate>
+          <div class="panel-title panel-title-line">Écrire au chauffeur</div>
+          <div class="field-grid">
+            <div class="field-row-2">
+              <label class="field">
+                <span class="field-label">Nom</span>
+                <input name="name" placeholder="Camille Léger" required>
+              </label>
+              <label class="field">
+                <span class="field-label">Téléphone</span>
+                <input name="phone" placeholder="06 12 34 56 78" required>
+              </label>
+            </div>
+            <label class="field">
+              <span class="field-label">Email</span>
+              <input type="email" name="email" placeholder="camille@exemple.fr" required>
+            </label>
+            <label class="field">
+              <span class="field-label">Sujet</span>
+              <select name="subject">
+                <option>Devis événementiel</option>
+                <option>Trajet longue distance</option>
+                <option>Mise à disposition</option>
+                <option>Autre demande</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Votre demande</span>
+              <textarea name="msg" rows="4" placeholder="Mariage le 12 juin, mairie du 11e puis réception à Fontainebleau…" required></textarea>
+            </label>
+          </div>
+          <button type="submit" class="btn-primary btn-block">Envoyer ma demande</button>
+        </form>
+
+        <div class="contact-step hidden" id="contact-done">
+          <div class="check-mark">✓</div>
+          <div class="done-title done-title-sm">Message envoyé</div>
+          <p class="done-p">Réponse du chauffeur sous 2 h en journée. Pour une demande urgente, WhatsApp reste le plus rapide.</p>
+          <button type="button" class="link-arrow" id="contact-reset">Écrire un autre message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="site-footer" data-screen-label="Footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand brand-static">
+            <span class="brand-name">Parisian Driver</span>
+            <span class="brand-dot"></span>
+          </div>
+          <p class="footer-about">Chauffeur privé VTC indépendant, Île-de-France. Le même visage de confiance à chaque trajet.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Le site</div>
+          <div class="footer-links">
+            <button type="button" data-go="services">Services</button>
+            <button type="button" data-go="vehicule">Véhicule</button>
+            <button type="button" data-go="zone">Zone de couverture</button>
+            <button type="button" data-go="reservation">Réservation</button>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Informations</div>
+          <div class="footer-links">
+            <button type="button" data-legal="mentions">Mentions légales</button>
+            <button type="button" data-legal="cgv">CGV &amp; annulation</button>
+            <span class="footer-muted">Programme de fidélité (bientôt)</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-links">
+            <a href="tel:+33695505901">06 95 50 59 01</a>
+            <a href="mailto:contact@parisiandriver.fr">contact@parisiandriver.fr</a>
+            <a href="https://wa.me/33695505901" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Parisian Driver</span>
+        <span>Île-de-France · toute la France sur demande</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile bottom bar ──────────────────────────────── -->
+  <div class="mobile-bar mobile-only">
+    <a href="tel:+33695505901" class="mobile-bar-call">Appeler</a>
+    <button type="button" class="mobile-bar-book" data-go="reservation">Réserver</button>
+  </div>
+
+  <!-- ── Legal modal ────────────────────────────────────── -->
+  <div class="legal-overlay hidden" id="legal-overlay" role="dialog" aria-modal="true" aria-labelledby="legal-title">
+    <div class="legal-modal">
+      <div class="legal-head">
+        <div>
+          <div class="kicker">Page légale</div>
+          <h2 id="legal-title"></h2>
+        </div>
+        <button type="button" class="legal-close" id="legal-close" aria-label="Fermer">✕</button>
+      </div>
+      <div class="legal-body" id="legal-body"></div>
+      <button type="button" class="btn-primary" id="legal-back">Revenir au site</button>
+    </div>
+  </div>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
