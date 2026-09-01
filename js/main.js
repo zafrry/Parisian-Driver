@@ -66,6 +66,32 @@
   window.addEventListener('resize', onScroll);
   onScroll();
 
+  /* ── Vidéo de fond du hero ───────────────────────────────
+     Chargée uniquement si l'utilisateur ne réduit pas les
+     animations et si la connexion n'est pas lente / en mode
+     économie de données. Sinon on garde le poster + le repli
+     image (hero-paris-nuit.jpg). */
+  (function () {
+    var video = document.querySelector('.hero-video');
+    if (!video) return;
+
+    var reduce = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
+    var slow = !!conn.saveData ||
+      (typeof conn.effectiveType === 'string' && /2g/.test(conn.effectiveType));
+
+    if (reduce || slow) return; // on reste sur l'image de repli
+
+    var source = document.createElement('source');
+    source.src = video.getAttribute('data-src');
+    source.type = 'video/mp4';
+    video.appendChild(source);
+    video.load();
+    var p = video.play();
+    if (p && typeof p.catch === 'function') p.catch(function () {}); // autoplay refusé : poster affiché
+  })();
+
   /* ── Année du footer ─────────────────────────────────── */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());

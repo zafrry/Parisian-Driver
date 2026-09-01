@@ -287,11 +287,30 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   background: var(--ink);
   padding: calc(122px + clamp(28px, 6vw, 78px)) var(--gutter) clamp(48px, 6vw, 80px);
 }
-.hero-backdrop { position: absolute; top: 0; bottom: 0; right: 0; left: 42%; z-index: 0; }
-.hero-photo { position: absolute; inset: 0; background-size: cover; background-position: center; }
+/* Fond plein cadre : vidéo cinématique + repli image (poster / connexions lentes) */
+.hero-backdrop {
+  position: absolute; inset: 0; z-index: 0;
+  background: #0E0F11 url('../assets/hero-paris-nuit.jpg') center / cover no-repeat;
+}
+.hero-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border: 0;
+}
+/* Overlay sombre semi-transparent pour la lisibilité du texte clair par-dessus */
 .hero-overlay {
   position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(100deg, rgba(14,15,17,1) 0%, rgba(14,15,17,0.72) 30%, rgba(14,15,17,0.42) 100%);
+  background: rgba(14, 15, 17, 0.55);
+}
+/* Léger renfort à gauche, côté texte, sans trahir l'overlay uniforme demandé */
+.hero-overlay::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(14,15,17,0.55) 0%, rgba(14,15,17,0.12) 46%, rgba(14,15,17,0) 72%);
+}
+/* Accessibilité : pas de vidéo si l'utilisateur réduit les animations */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
 }
 .hero-inner {
   position: relative;
