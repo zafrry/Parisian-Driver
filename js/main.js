@@ -83,8 +83,12 @@
 
     if (reduce || slow) return; // on reste sur l'image de repli
 
+    // Version allégée (640×360, ~290 Ko) sur les petits écrans,
+    // version 720p (~940 Ko) au-delà.
+    var mobileSrc = video.getAttribute('data-src-mobile');
+    var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
     var source = document.createElement('source');
-    source.src = video.getAttribute('data-src');
+    source.src = (isMobile && mobileSrc) ? mobileSrc : video.getAttribute('data-src');
     source.type = 'video/mp4';
     video.appendChild(source);
     video.load();
