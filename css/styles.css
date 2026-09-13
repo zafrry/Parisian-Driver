@@ -408,13 +408,21 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   aspect-ratio: 1 / 1;
   border: 1px solid var(--line-soft);
   background: linear-gradient(135deg, #191C20 0%, #0E0F11 100%);
-  display: flex;
-  align-items: flex-end;
-  padding: 16px;
+  overflow: hidden;
   min-width: 0;
 }
+.veh-tile img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .veh-tile-wide { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+.veh-tile-short { aspect-ratio: 16 / 9; }
 .veh-tile span {
+  position: relative;
+  display: inline-block;
+  margin: 16px;
   font-family: var(--mono); font-size: 11px;
   letter-spacing: 0.06em; color: rgba(236, 236, 232, 0.5);
 }
