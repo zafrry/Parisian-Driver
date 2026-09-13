@@ -137,24 +137,28 @@
     mentions: {
       title: 'Mentions légales',
       blocks: [
-        { title: 'Éditeur du site', body: 'Parisian Driver, SASU au capital de [montant] €, siège social [adresse], Île-de-France. Représentant légal : [nom du dirigeant]. SIRET : [à compléter]. RCS : [à compléter]. Téléphone : 06 95 50 59 01.' },
-        { title: 'Activité réglementée', body: 'Exploitant de véhicule de transport avec chauffeur (VTC) inscrit au registre national des exploitants VTC. Attestation d’assurance RC professionnelle : [assureur, n° de police].' },
-        { title: 'Hébergement', body: 'Site hébergé par [hébergeur], [adresse], [téléphone]. Nom de domaine parisiandriver.fr.' },
-        { title: 'Données personnelles', body: 'Les informations transmises via les formulaires de réservation et de contact servent uniquement à traiter la demande de course. Aucune donnée n’est cédée à un tiers hors prestataires techniques (réservation, paiement). Droit d’accès, de rectification et de suppression sur simple demande à contact@parisiandriver.fr.' },
+        { title: 'Éditeur du site', body: 'Parisian Driver, SASU au capital social de 1 €, dont le siège social est situé 56 Rue de la Marne, 94400 Vitry-sur-Seine. SIREN : 109 339 606. RCS Créteil. Président : Ramdane Djellali. Téléphone : 06 89 19 86 83. E-mail : Parisiandriver75@gmail.com.' },
+        // TODO(légal) : numéro de TVA intracommunautaire à confirmer auprès du comptable
+        // (assujettissement à vérifier) ; à défaut, indiquer « TVA non applicable, art. 293 B du CGI ».
+        { title: 'TVA intracommunautaire', body: '[À compléter — à confirmer auprès du comptable si l’entreprise est assujettie ; sinon, TVA non applicable, art. 293 B du CGI.]' },
+        { title: 'Activité réglementée', body: 'Exploitant de véhicule de transport avec chauffeur (VTC) inscrit au registre national des exploitants VTC sous le numéro 05326000701.' },
+        // TODO(légal) : nom, adresse et téléphone de l'hébergeur à compléter une fois l'hébergement choisi.
+        { title: 'Hébergement', body: 'Site hébergé par [hébergeur — à compléter], [adresse], [téléphone].' },
+        { title: 'Données personnelles', body: 'Les informations transmises via les formulaires de réservation et de contact servent uniquement à traiter la demande de course. Aucune donnée n’est cédée à un tiers hors prestataires techniques (réservation, paiement). Droit d’accès, de rectification et de suppression sur simple demande à Parisiandriver75@gmail.com.' },
         { title: 'Propriété intellectuelle', body: 'Textes, photographies et identité visuelle sont la propriété de Parisian Driver. Toute reproduction sans accord écrit est interdite.' }
       ]
     },
     cgv: {
       title: 'CGV & politique d’annulation',
       blocks: [
-        { title: 'Objet', body: 'Les présentes conditions régissent les prestations de transport de personnes avec chauffeur assurées par Parisian Driver (SASU, SIRET [à compléter]) pour toute réservation effectuée via le site, par téléphone au 06 95 50 59 01 ou par WhatsApp.' },
+        { title: 'Objet', body: 'Les présentes conditions régissent les prestations de transport de personnes avec chauffeur assurées par Parisian Driver (SASU, SIREN 109 339 606, RCS Créteil) pour toute réservation effectuée via le site, par téléphone au 06 89 19 86 83 ou par WhatsApp.' },
         { title: 'Réservation et délai minimum', body: 'Toute réservation doit être effectuée au minimum 2 heures à l’avance du jeudi au dimanche, et 24 heures à l’avance du lundi au mercredi. La réservation devient ferme après confirmation explicite du chauffeur.' },
         { title: 'Prix et acompte', body: 'Le prix est communiqué avant confirmation et reste ferme, sauf modification du trajet demandée par le client. Un acompte de 20 % est demandé à la réservation en ligne ; le solde est réglé à l’issue de la course. Le client peut également réserver sans acompte en contactant directement le chauffeur. Grille tarifaire et suppléments (nuit, jours fériés, bagages, animaux, attente) : [à compléter].' },
         { title: 'Annulation et remboursement', body: 'Annulation plus de 24 heures avant la prise en charge : remboursement intégral de l’acompte. Annulation à moins de 24 heures : abattement de 20 % appliqué sur la somme versée. En cas d’empêchement du chauffeur, la totalité des sommes versées est remboursée ; l’engagement de zéro annulation vaut engagement contractuel.' },
         { title: 'Attente et retard', body: 'Une attente de 45 minutes est incluse pour les transferts aéroport (15 minutes pour les gares et adresses privées). Au-delà, l’attente est facturée selon le tarif horaire en vigueur.' },
         { title: 'Comportement à bord', body: 'Le transport d’animaux, de bagages volumineux ou l’installation d’un siège enfant se demandent à la réservation. Il est interdit de fumer à bord. Le chauffeur peut refuser une prise en charge en cas de comportement dangereux ou de nombre de passagers supérieur à celui déclaré.' },
         { title: 'Paiement', body: 'Paiement en ligne via [prestataire Time], ou par carte à bord. Facture transmise par email après chaque course.' },
-        { title: 'Réclamations', body: 'Toute réclamation peut être adressée à contact@parisiandriver.fr dans un délai de 15 jours après la course. Droit applicable : droit français.' }
+        { title: 'Réclamations', body: 'Toute réclamation peut être adressée à Parisiandriver75@gmail.com dans un délai de 15 jours après la course. Droit applicable : droit français.' }
       ]
     }
   };

@@ -692,6 +692,13 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 }
 .footer-links button:hover, .footer-links a:hover { color: #fff; }
 .footer-muted { font-size: 14.5px; color: rgba(236, 236, 232, 0.38); }
+.footer-vtc {
+  margin: 14px 0 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: rgba(236, 236, 232, 0.55);
+}
 .footer-bottom {
   display: flex; flex-wrap: wrap; justify-content: space-between;
   gap: 10px 24px; padding-top: 22px;
