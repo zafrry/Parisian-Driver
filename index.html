@@ -323,95 +323,23 @@
       </div>
 
       <div class="form-panel">
-        <!-- Step 1: form -->
-        <form id="booking-form" class="booking-step" novalidate>
-          <div class="panel-head">
-            <span class="panel-title">Votre course</span>
-            <span class="panel-step">Étape 1 / 2</span>
-          </div>
-          <div class="field-grid">
-            <label class="field">
-              <span class="field-label">Prestation</span>
-              <select name="type" id="b-type">
-                <option>Transfert aéroport &amp; gare</option>
-                <option>Mise à disposition</option>
-                <option>Longue distance &amp; intervilles</option>
-                <option>Événementiel</option>
-              </select>
-            </label>
-            <label class="field">
-              <span class="field-label">Adresse de départ</span>
-              <input name="from" id="b-from" placeholder="12 rue de Rivoli, Paris 1er" required>
-            </label>
-            <label class="field">
-              <span class="field-label">Destination</span>
-              <input name="to" id="b-to" placeholder="Aéroport Roissy CDG, terminal 2E" required>
-            </label>
-            <div class="field-row-3">
-              <label class="field">
-                <span class="field-label">Date</span>
-                <input type="date" name="date" id="b-date" required>
-              </label>
-              <label class="field">
-                <span class="field-label">Heure</span>
-                <input type="time" name="time" id="b-time" required>
-              </label>
-              <label class="field">
-                <span class="field-label">Passagers</span>
-                <select name="pax" id="b-pax">
-                  <option>1</option><option selected>2</option><option>3</option><option>4</option>
-                </select>
-              </label>
-            </div>
-            <label class="field">
-              <span class="field-label">Précisions (facultatif)</span>
-              <input name="note" id="b-note" placeholder="Siège bébé, 3 valises, n° de vol…">
-            </label>
-          </div>
-          <button type="submit" class="btn-primary btn-block" id="b-submit">Voir le récapitulatif →</button>
-          <p class="form-hint" id="b-hint">Renseignez le départ, la destination, la date et l'heure pour continuer.</p>
-        </form>
-
-        <!-- Step 2: recap -->
-        <div class="booking-step hidden" id="booking-recap">
-          <div class="panel-head">
-            <span class="panel-title">Récapitulatif</span>
-            <span class="panel-step">Étape 2 / 2</span>
-          </div>
-          <div class="recap-list">
-            <div class="recap-row"><span class="recap-k">Prestation</span><span class="recap-v" id="r-type"></span></div>
-            <div class="recap-row"><span class="recap-k">Trajet</span><span class="recap-v" id="r-route"></span></div>
-            <div class="recap-row"><span class="recap-k">Départ</span><span class="recap-v" id="r-when"></span></div>
-            <div class="recap-row"><span class="recap-k">Passagers</span><span class="recap-v" id="r-pax"></span></div>
-            <div class="recap-row"><span class="recap-k">Précisions</span><span class="recap-v" id="r-note"></span></div>
-          </div>
-          <div class="recap-price">
-            <div class="recap-price-top">
-              <span>Prix de la course</span>
-              <span class="recap-price-val">Sur devis</span>
-            </div>
-            <p>Le prix exact vous est communiqué par le chauffeur sous 2 h, avant tout paiement.</p>
-            <div class="hr hr-sm"></div>
-            <div class="recap-acompte">
-              <span>Acompte à la réservation</span>
-              <span class="recap-acompte-v">20 %</span>
-            </div>
-          </div>
-          <button type="button" class="btn-primary btn-block" id="b-confirm">Confirmer ma demande</button>
-          <button type="button" class="btn-ghost btn-block" data-booking-back>Modifier</button>
+        <div class="panel-head">
+          <span class="panel-title">Votre course</span>
+          <span class="panel-step">Réservation en ligne</span>
         </div>
-
-        <!-- Step 3: done -->
-        <div class="booking-step hidden" id="booking-done">
-          <div class="check-mark">✓</div>
-          <div class="done-title">Demande envoyée</div>
-          <p class="done-p">Le chauffeur vous confirme personnellement sous 2 h par SMS et email, avec le prix définitif et le lien de paiement de l'acompte.</p>
-          <div class="ref-row">
-            <span class="recap-k">Référence</span>
-            <span class="ref-value" id="b-ref"></span>
+        <div class="booking-embed">
+          <div class="booking-embed-frame">
+            <span class="booking-embed-loading">Chargement du module de réservation…</span>
+            <iframe
+              src="https://app.clickchauffeur.com:8443/module/h7oC6wlYqcvWPCrA"
+              title="Module de réservation Parisian Driver"
+              loading="lazy"
+              allow="payment"
+              onload="this.classList.add('is-loaded'); this.previousElementSibling.classList.add('hidden')"
+            ></iframe>
           </div>
-          <button type="button" class="link-arrow" data-booking-back>Nouvelle réservation</button>
         </div>
+        <p class="form-hint">Un souci pour afficher le module ? <a href="https://app.clickchauffeur.com:8443/module/h7oC6wlYqcvWPCrA" target="_blank" rel="noopener">Ouvrez-le dans un nouvel onglet</a>, ou <a href="https://wa.me/33695505901" target="_blank" rel="noopener">écrivez sur WhatsApp</a>.</p>
       </div>
     </div>
   </section>

@@ -594,28 +594,47 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 .field-row-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 148px), 1fr)); gap: 12px; }
 .field-row-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 118px), 1fr)); gap: 12px; }
 
-.booking-step .btn-primary, .booking-step .btn-ghost { margin-top: 24px; }
-.booking-step .btn-ghost { margin-top: 10px; }
 .contact-step .btn-primary { margin-top: 22px; }
 .form-hint { margin: 14px 0 0; font-size: 12.5px; line-height: 1.55; color: rgba(236, 236, 232, 0.45); }
+.form-hint a { color: rgba(236, 236, 232, 0.7); text-decoration: underline; text-underline-offset: 2px; }
+.form-hint a:hover { color: var(--blue); }
 
-.recap-list { margin-top: 8px; }
-.recap-row {
-  display: flex; flex-wrap: wrap; justify-content: space-between;
-  gap: 6px 18px; padding: 15px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+/* ── Module de réservation embarqué (ClickChauffeur) ─────
+   Cadre sombre cohérent avec le reste du site autour d'un widget
+   tiers dont on ne peut pas restyler l'intérieur (iframe cross-origin).
+   Un texte de chargement s'efface dès que le module a fini de charger. */
+.booking-embed { margin-top: 22px; }
+.booking-embed-frame {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 950px;
+  background: var(--ink);
+  border: 1px solid var(--line-soft);
 }
-.recap-k { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--txt-42); flex: none; }
-.recap-v { font-size: 15px; font-weight: 500; text-align: right; min-width: 0; overflow-wrap: anywhere; }
-
-.recap-price { margin-top: 22px; background: var(--ink); border: 1px solid var(--line-soft); padding: 20px; }
-.recap-price-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 16px; }
-.recap-price-top > span:first-child { font-size: 15px; font-weight: 600; }
-.recap-price-val { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; color: var(--blue); }
-.recap-price p { margin: 10px 0 0; font-size: 13px; line-height: 1.55; color: var(--txt-60); }
-.recap-acompte { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; }
-.recap-acompte > span:first-child { font-size: 14px; color: var(--txt-60); }
-.recap-acompte-v { font-size: 14px; font-weight: 600; }
+.booking-embed-loading {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--txt-42);
+}
+.booking-embed-loading.hidden { display: none; }
+.booking-embed-frame iframe {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 950px;
+  border: 0;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.booking-embed-frame iframe.is-loaded { opacity: 1; }
 
 .check-mark {
   width: 44px; height: 44px;
@@ -623,19 +642,11 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   display: flex; align-items: center; justify-content: center;
   color: var(--blue); font-size: 20px;
 }
-#booking-done, #contact-done { animation: pd-rise .5s ease both; padding: 16px 0 8px; }
+#contact-done { animation: pd-rise .5s ease both; padding: 16px 0 8px; }
 .done-title { margin-top: 22px; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
 .done-title-sm { font-size: 20px; }
 .done-p { margin: 14px 0 0; font-size: 15.5px; line-height: 1.65; color: var(--txt-60); max-width: 38ch; }
-.ref-row {
-  margin-top: 24px;
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px;
-  padding: 16px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.ref-value { font-family: var(--mono); font-size: 14px; font-weight: 500; }
-#booking-done .link-arrow, #contact-done .link-arrow { margin-top: 22px; }
+#contact-done .link-arrow { margin-top: 22px; }
 
 /* ── À propos ───────────────────────────────────────────── */
 .about-head {
