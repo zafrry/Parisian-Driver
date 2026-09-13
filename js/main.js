@@ -6,7 +6,7 @@
 
   var header = document.getElementById('site-header');
   var rail = document.getElementById('nav-rail');
-  var sectionIds = ['accueil', 'services', 'vehicule', 'zone', 'evenementiel',
+  var sectionIds = ['accueil', 'services', 'vehicule', 'van', 'zone', 'evenementiel',
     'tarifs', 'reservation', 'apropos', 'contact'];
 
   /* ── Défilement doux vers une section ────────────────── */

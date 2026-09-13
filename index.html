@@ -34,6 +34,7 @@
       <nav class="nav-desktop" aria-label="Navigation principale">
         <button type="button" class="nav-link" data-go="services">Services<span class="nav-bar"></span></button>
         <button type="button" class="nav-link" data-go="vehicule">Véhicule<span class="nav-bar"></span></button>
+        <button type="button" class="nav-link" data-go="van">Van<span class="nav-bar"></span></button>
         <button type="button" class="nav-link" data-go="evenementiel">Événementiel<span class="nav-bar"></span></button>
         <button type="button" class="nav-link" data-go="tarifs">Tarifs<span class="nav-bar"></span></button>
         <button type="button" class="nav-link" data-go="reservation">Réservation<span class="nav-bar"></span></button>
@@ -52,6 +53,7 @@
         <button type="button" class="rail-link" data-nav="accueil" data-go="accueil">Accueil</button>
         <button type="button" class="rail-link" data-nav="services" data-go="services">Services</button>
         <button type="button" class="rail-link" data-nav="vehicule" data-go="vehicule">Véhicule</button>
+        <button type="button" class="rail-link" data-nav="van" data-go="van">Van</button>
         <button type="button" class="rail-link" data-nav="evenementiel" data-go="evenementiel">Événementiel</button>
         <button type="button" class="rail-link" data-nav="tarifs" data-go="tarifs">Tarifs</button>
         <button type="button" class="rail-link" data-nav="reservation" data-go="reservation">Réservation</button>
@@ -151,9 +153,18 @@
   <section id="vehicule" class="section" data-screen-label="Véhicule">
     <div class="container grid-2">
       <div class="veh-gallery">
-        <div class="veh-tile veh-tile-wide"><span>Toyota Camry · 3/4 avant</span></div>
-        <div class="veh-tile"><span>Intérieur cuir</span></div>
-        <div class="veh-tile"><span>Attentions à bord</span></div>
+        <div class="veh-tile veh-tile-wide">
+          <img src="assets/camry-ext.jpg" alt="Toyota Camry noire, vue 3/4 avant" loading="lazy">
+        </div>
+        <div class="veh-tile">
+          <img src="assets/camry-int-1.jpg" alt="Toyota Camry, poste de conduite avec écran multimédia" loading="lazy">
+        </div>
+        <div class="veh-tile">
+          <img src="assets/camry-int-2.jpg" alt="Toyota Camry, sièges en cuir vus de profil" loading="lazy">
+        </div>
+        <div class="veh-tile">
+          <img src="assets/camry-int-3.jpg" alt="Toyota Camry, tableau de bord et sièges avant" loading="lazy">
+        </div>
       </div>
 
       <div>
@@ -167,6 +178,34 @@
           <div class="spec-row"><dt>Confort</dt><dd>Cuir · climatisation · chargeurs</dd></div>
           <div class="spec-row"><dt>Sur demande</dt><dd>Réhausseur · siège bébé</dd></div>
         </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Van ────────────────────────────────────────────── -->
+  <section id="van" class="section" data-screen-label="Van">
+    <div class="container grid-2">
+      <div class="veh-gallery">
+        <div class="veh-tile veh-tile-wide">
+          <img src="assets/classev-ext.jpg" alt="Mercedes-Benz Classe V noir, vue 3/4 avant" loading="lazy">
+        </div>
+        <div class="veh-tile veh-tile-wide veh-tile-short">
+          <img src="assets/classev-int.jpg" alt="Mercedes-Benz Classe V, sièges capitaine à l'arrière" loading="lazy">
+        </div>
+      </div>
+
+      <div>
+        <div class="kicker">Le van</div>
+        <h2>Pour les groupes, le confort d'un van.</h2>
+        <p class="lead">Un Mercedes-Benz Classe V, pour les groupes, les familles et les bagages volumineux : sièges capitaine, climatisation multi-zone, espace pour ne rien laisser derrière. Jusqu'à 7 passagers, avec le même engagement de zéro annulation.</p>
+        <p class="lead">Idéal pour les transferts aéroport en groupe, les navettes d'invités lors d'un mariage, ou toute sortie où une seule voiture ne suffit pas.</p>
+        <dl class="spec-list">
+          <div class="spec-row"><dt>Modèle</dt><dd>Mercedes-Benz Classe V</dd></div>
+          <div class="spec-row"><dt>Passagers</dt><dd>Jusqu'à 7</dd></div>
+          <div class="spec-row"><dt>Confort</dt><dd>Sièges capitaine · climatisation multi-zone</dd></div>
+          <div class="spec-row"><dt>Idéal pour</dt><dd>Groupes · familles · bagages volumineux</dd></div>
+        </dl>
+        <button type="button" class="link-arrow" data-go="contact">Réserver un van pour votre groupe →</button>
       </div>
     </div>
   </section>
@@ -482,6 +521,7 @@
           <div class="footer-links">
             <button type="button" data-go="services">Services</button>
             <button type="button" data-go="vehicule">Véhicule</button>
+            <button type="button" data-go="van">Van</button>
             <button type="button" data-go="zone">Zone de couverture</button>
             <button type="button" data-go="reservation">Réservation</button>
           </div>
