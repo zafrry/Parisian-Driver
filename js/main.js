@@ -7,7 +7,7 @@
   var header = document.getElementById('site-header');
   var rail = document.getElementById('nav-rail');
   var sectionIds = ['accueil', 'services', 'vehicule', 'van', 'zone', 'evenementiel',
-    'tarifs', 'reservation', 'apropos', 'contact'];
+    'reservation', 'apropos', 'contact'];
 
   /* ── Défilement doux vers une section ────────────────── */
   function headerHeight() {
@@ -68,8 +68,8 @@
 
   /* ── Fondus de bord du rail mobile ────────────────────
      Indique visuellement qu'il reste des onglets à découvrir
-     en scrollant horizontalement (ex: Tarifs, Réservation,
-     Contact au-delà de l'écran visible). */
+     en scrollant horizontalement (ex: Réservation, Contact
+     au-delà de l'écran visible). */
   if (rail) {
     var updateRailFade = function () {
       var max = rail.scrollWidth - rail.clientWidth;
