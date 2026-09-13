@@ -66,6 +66,21 @@
   window.addEventListener('resize', onScroll);
   onScroll();
 
+  /* ── Fondus de bord du rail mobile ────────────────────
+     Indique visuellement qu'il reste des onglets à découvrir
+     en scrollant horizontalement (ex: Tarifs, Réservation,
+     Contact au-delà de l'écran visible). */
+  if (rail) {
+    var updateRailFade = function () {
+      var max = rail.scrollWidth - rail.clientWidth;
+      rail.classList.toggle('nav-rail--start', rail.scrollLeft > 4);
+      rail.classList.toggle('nav-rail--end', rail.scrollLeft < max - 4);
+    };
+    rail.addEventListener('scroll', updateRailFade, { passive: true });
+    window.addEventListener('resize', updateRailFade);
+    updateRailFade();
+  }
+
   /* ── Vidéo de fond du hero ───────────────────────────────
      Chargée uniquement si l'utilisateur ne réduit pas les
      animations et si la connexion n'est pas lente / en mode
