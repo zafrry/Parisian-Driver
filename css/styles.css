@@ -20,6 +20,18 @@
   --sans: 'Instrument Sans', Helvetica, Arial, sans-serif;
   --maxw: 1320px;
   --gutter: clamp(20px, 5vw, 56px);
+  /* Padding vertical partagé par toutes les sections (Services, Véhicule,
+     Van, Zone, Événementiel, Réservation, À propos, Contact) — desktop
+     ~96-140px. Réduit sous 1080px (cf. --header-h) à ~56-72px. */
+  --section-padding-y: clamp(96px, 9vw, 140px);
+  --header-h: 76px; /* hauteur du header fixe, desktop (≥1080px) */
+  --header-h-narrow: 124px; /* hauteur du header + rail de nav, mobile/tablette (<1080px) */
+}
+
+/* Sous 1080px, le header affiche un second rang (rail de nav horizontal)
+   qui l'agrandit — mêmes seuils que la nav (.nav-desktop / .nav-rail). */
+@media (max-width: 1079px) {
+  :root { --section-padding-y: clamp(56px, 10vw, 72px); }
 }
 
 * { box-sizing: border-box; }
@@ -56,7 +68,19 @@ h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.03em; }
 /* ── Layout helpers ─────────────────────────────────────── */
 .container { max-width: var(--maxw); margin: 0 auto; }
 
-.section { background: var(--ink); padding: clamp(68px, 9vw, 128px) var(--gutter); }
+.section { background: var(--ink); padding: var(--section-padding-y) var(--gutter); }
+
+/* Décale l'ancrage natif (#id direct, favori, retour navigateur) de la
+   hauteur du header fixe, pour que le titre de la section ne se
+   retrouve jamais caché dessous. Les clics via la nav (JS) calculent
+   déjà cet offset eux-mêmes — cette règle couvre les cas non gérés
+   par ce JS (navigation par ancre native). */
+section[id] {
+  scroll-margin-top: var(--header-h);
+}
+@media (max-width: 1079px) {
+  section[id] { scroll-margin-top: var(--header-h-narrow); }
+}
 
 .grid-2 {
   display: grid;
