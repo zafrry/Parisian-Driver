@@ -326,12 +326,24 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 }
 .rail-link.active { color: var(--paper); border-bottom-color: var(--blue); }
 
-/* ── Hero ───────────────────────────────────────────────── */
+/* ── Hero ───────────────────────────────────────────────────────
+   Refonte alignée sur le prototype validé : plus d'eyebrow, plus de
+   numérotation sur les piliers, CTA principal sans flèche, dégradé de
+   protection sur la photo, piliers en pied de section façon "verre
+   dépoli", icône WhatsApp inline, tout en Instrument Sans. ────────── */
 .hero {
   position: relative;
   overflow: hidden;
   background: var(--ink);
-  padding: calc(122px + clamp(28px, 6vw, 78px)) var(--gutter) clamp(48px, 6vw, 80px);
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* Dégagement sous le header fixe — mêmes hauteurs que le header lui-même. */
+  padding-top: var(--header-h);
+}
+@media (max-width: 1079px) {
+  .hero { padding-top: var(--header-h-narrow); }
 }
 /* Fond plein cadre : vidéo cinématique + repli image (poster / connexions lentes) */
 .hero-backdrop {
@@ -344,61 +356,72 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   object-fit: cover;
   border: 0;
 }
-/* Overlay sombre semi-transparent pour la lisibilité du texte clair par-dessus */
+/* Dégradé de protection : sombre à gauche/bas (côté texte), plus clair à
+   droite — garantit la lisibilité quelle que soit la photo utilisée. */
 .hero-overlay {
   position: absolute; inset: 0; pointer-events: none;
-  background: rgba(14, 15, 17, 0.55);
-}
-/* Léger renfort à gauche, côté texte, sans trahir l'overlay uniforme demandé */
-.hero-overlay::after {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(100deg, rgba(14,15,17,0.55) 0%, rgba(14,15,17,0.12) 46%, rgba(14,15,17,0) 72%);
+  background: linear-gradient(100deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.42) 42%, rgba(0, 0, 0, 0.15) 68%);
 }
 /* Accessibilité : pas de vidéo si l'utilisateur réduit les animations */
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display: none; }
 }
+/* .hero-inner est un item flex (colonne) : lui donner à la fois un
+   max-width et des margin auto casserait le stretch par défaut (les
+   deux mécanismes sont incompatibles en flexbox) et le ferait
+   "rétrécir" au lieu de s'étirer. Le padding gère les marges latérales
+   ici ; le centrage sur --maxw est délégué à .hero-container, un bloc
+   normal imbriqué — même mécanisme que .container ailleurs sur le
+   site, pour que le texte du hero reste calé sur la même colonne que
+   le reste des sections sur grand écran. */
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
-  gap: clamp(32px, 5vw, 72px);
-  align-items: center;
+  margin-top: 14vh;
+  margin-bottom: 48px;
+  padding: 0 var(--gutter);
 }
-.hero-copy { animation: pd-rise .7s ease both; min-width: 0; max-width: min(100%, 660px); }
+.hero-container { max-width: var(--maxw); margin: 0 auto; }
+.hero-content { max-width: 760px; }
 
-.eyebrow-row { display: flex; align-items: center; gap: 10px; margin-bottom: 26px; }
-.eyebrow-line { width: 22px; height: 1px; background: rgba(255, 255, 255, 0.4); flex: none; }
-.eyebrow {
-  font-family: var(--mono);
-  font-size: 11px; font-weight: 500;
-  letter-spacing: 0.18em; text-transform: uppercase;
-  color: rgba(236, 236, 232, 0.6);
-}
 .hero h1 { font-size: clamp(34px, 5vw, 70px); line-height: 1.04; letter-spacing: -0.035em; text-wrap: balance; }
 .hero-lead {
-  margin: 26px 0 0;
+  margin: 22px 0 0;
   max-width: 46ch;
   font-size: clamp(16px, 1.2vw, 19px);
   line-height: 1.62;
-  color: rgba(236, 236, 232, 0.66);
+  color: var(--txt-60);
 }
-.hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 36px; }
+.hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 34px; margin-bottom: 56px; }
 
-.hero-facts {
+.btn-whatsapp { display: inline-flex; align-items: center; gap: 8px; }
+.btn-whatsapp svg { width: 16px; height: 16px; flex: none; }
+
+/* Bande des 3 piliers : pied de section en "verre dépoli", transition
+   continue vers la section suivante plutôt qu'une coupure nette. */
+.hero-pillars {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 168px), 1fr));
-  gap: 1px;
-  margin-top: clamp(40px, 5vw, 64px);
-  background: rgba(255, 255, 255, 0.14);
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  background: rgba(14, 15, 17, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
-.fact { background: var(--ink); padding: 20px 18px 22px; }
-.fact-num { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--txt-42); }
-.fact-title { margin-top: 8px; font-size: 15px; font-weight: 600; }
-.fact p { margin: 6px 0 0; font-size: 13.5px; line-height: 1.5; color: rgba(236, 236, 232, 0.55); }
+.pillar { padding: 26px 32px; border-right: 1px solid var(--line); }
+.pillar:last-child { border-right: none; }
+.pillar-title { font-size: 15px; font-weight: 600; }
+.pillar p { margin: 6px 0 0; font-size: 13.5px; line-height: 1.45; color: var(--txt-60); }
+
+@media (max-width: 860px) {
+  .hero h1 { font-size: clamp(32px, 9vw, 44px); }
+  .hero-content { max-width: 100%; }
+  .hero-lead { max-width: 100%; }
+  .hero-cta { flex-direction: column; align-items: stretch; margin-bottom: 0; }
+  .hero-pillars { grid-template-columns: 1fr; }
+  .pillar { border-right: none; border-bottom: 1px solid var(--line); }
+}
 
 /* ── Section heads ──────────────────────────────────────── */
 .section-head {
