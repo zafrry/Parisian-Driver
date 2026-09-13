@@ -36,14 +36,13 @@
         <button type="button" class="nav-link" data-go="vehicule">Véhicule<span class="nav-bar"></span></button>
         <button type="button" class="nav-link" data-go="van">Van<span class="nav-bar"></span></button>
         <button type="button" class="nav-link" data-go="evenementiel">Événementiel<span class="nav-bar"></span></button>
-        <button type="button" class="nav-link" data-go="tarifs">Tarifs<span class="nav-bar"></span></button>
         <button type="button" class="nav-link" data-go="reservation">Réservation<span class="nav-bar"></span></button>
         <button type="button" class="nav-link" data-go="contact">Contact<span class="nav-bar"></span></button>
       </nav>
 
       <div class="header-actions">
         <a href="tel:+33695505901" class="btn-phone desktop-only">06 95 50 59 01</a>
-        <button type="button" class="btn-primary btn-sm" data-go="reservation">Réserver</button>
+        <button type="button" class="btn-primary btn-sm btn-accent" data-go="reservation">Réserver</button>
         <a href="tel:+33695505901" class="btn-appel mobile-only" aria-label="Appeler le 06 95 50 59 01">Appel</a>
       </div>
     </div>
@@ -55,7 +54,6 @@
         <button type="button" class="rail-link" data-nav="vehicule" data-go="vehicule">Véhicule</button>
         <button type="button" class="rail-link" data-nav="van" data-go="van">Van</button>
         <button type="button" class="rail-link" data-nav="evenementiel" data-go="evenementiel">Événementiel</button>
-        <button type="button" class="rail-link" data-nav="tarifs" data-go="tarifs">Tarifs</button>
         <button type="button" class="rail-link" data-nav="reservation" data-go="reservation">Réservation</button>
         <button type="button" class="rail-link" data-nav="contact" data-go="contact">Contact</button>
       </div>
@@ -143,6 +141,10 @@
       </div>
 
       <div class="onboard-note">
+        <span class="onboard-tag">Tarifs</span>
+        <span>Prix fixe communiqué avant confirmation, aucune surprise le jour J.</span>
+      </div>
+      <div class="onboard-note">
         <span class="onboard-tag">À bord</span>
         <span>Eau, boissons et presse à bord. Réhausseur, siège bébé et bagages volumineux sur simple demande.</span>
       </div>
@@ -205,6 +207,7 @@
           <div class="spec-row"><dt>Confort</dt><dd>Sièges capitaine · climatisation multi-zone</dd></div>
           <div class="spec-row"><dt>Idéal pour</dt><dd>Groupes · familles · bagages volumineux</dd></div>
         </dl>
+        <p class="van-partner-note">Van assuré par un partenaire de confiance, sélectionné et suivi par Parisian Driver.</p>
         <button type="button" class="btn-primary btn-on-navy" data-go="contact">Réserver un van pour votre groupe →</button>
       </div>
     </div>
@@ -220,6 +223,13 @@
         <button type="button" class="link-arrow" data-go="contact">Une destination particulière ? Contactez-nous pour un devis →</button>
       </div>
       <div class="zone-card">
+        <svg class="zone-radar" viewBox="0 0 240 180" role="img" aria-label="Rayonnement depuis Paris : Île-de-France puis toute la France">
+          <circle class="zone-radar-ring zone-radar-ring--3" cx="120" cy="90" r="80"></circle>
+          <circle class="zone-radar-ring zone-radar-ring--2" cx="120" cy="90" r="54"></circle>
+          <circle class="zone-radar-ring zone-radar-ring--1" cx="120" cy="90" r="28"></circle>
+          <circle class="zone-radar-dot" cx="120" cy="90" r="4"></circle>
+          <text class="zone-radar-label" x="120" y="112" text-anchor="middle">Paris</text>
+        </svg>
         <div class="zone-row">
           <span class="zone-label">Prise en charge</span>
           <span class="zone-value">Île-de-France</span>
@@ -259,51 +269,6 @@
           <span class="chip chip-light">Réceptions</span>
         </div>
         <button type="button" class="btn-primary btn-on-navy" data-go="contact">Demander un devis événementiel →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Tarifs ─────────────────────────────────────────── -->
-  <section id="tarifs" class="section" data-screen-label="Tarifs">
-    <div class="container">
-      <div class="section-head section-head-line">
-        <div class="section-head-left">
-          <div class="kicker">Tarifs</div>
-          <h2>Un prix connu avant de monter</h2>
-        </div>
-      </div>
-
-      <div class="grid-price">
-        <div class="price-cell">
-          <div class="price-title">Transfert aéroport / gare</div>
-          <div class="price-value">Sur devis</div>
-          <p>Prix fixe communiqué à la réservation. Suivi de vol, 45 min d'attente incluses.</p>
-        </div>
-        <div class="price-cell">
-          <div class="price-title">Mise à disposition</div>
-          <div class="price-value">Sur devis</div>
-          <p>Facturation à l'heure ou à la demi-journée, arrêts illimités dans la zone.</p>
-        </div>
-        <div class="price-cell">
-          <div class="price-title">Longue distance &amp; événementiel</div>
-          <div class="price-value">Sur devis</div>
-          <p>Étudié selon le trajet, la durée et le nombre de passagers.</p>
-        </div>
-      </div>
-
-      <div class="terms">
-        <div class="term">
-          <div class="term-label">Acompte</div>
-          <p>20 % à la réservation en ligne, le solde après la course. Ou réservation sans acompte en nous contactant directement.</p>
-        </div>
-        <div class="term">
-          <div class="term-label">Délai minimum</div>
-          <p>2 h du jeudi au dimanche, 24 h du lundi au mercredi. Pour l'événementiel, le plus tôt possible.</p>
-        </div>
-        <div class="term">
-          <div class="term-label">Annulation</div>
-          <p>Remboursement intégral au-delà de 24 h avant la course. En dessous, abattement de 20 %.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -361,7 +326,7 @@
       <div class="about-grid">
         <div class="about-cell">
           <div class="about-title">Zéro annulation</div>
-          <p>Engagement formalisé, pas un argument marketing.</p>
+          <p>En cas d'empêchement du chauffeur, vous êtes intégralement remboursé.</p>
         </div>
         <div class="about-cell">
           <div class="about-title">Un chauffeur, une relation</div>
@@ -369,7 +334,7 @@
         </div>
         <div class="about-cell">
           <div class="about-title">Réservation directe</div>
-          <p>Par le site ou WhatsApp, sans intermédiaire.</p>
+          <p>Votre demande part directement au chauffeur, sans plateforme entre vous deux.</p>
         </div>
       </div>
     </div>
