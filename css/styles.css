@@ -544,7 +544,7 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 }
 .stop h3 { font-size: 19px; font-weight: 600; line-height: 1.3; margin-bottom: 11px; }
 .stop p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--txt-60); max-width: 240px; }
-.tag { margin-top: 16px; font-size: 12px; color: var(--txt-42); }
+.tag { margin-top: auto; padding-top: 16px; font-size: 12px; color: rgba(155, 180, 216, 0.65); }
 
 /* Arrêt Événementiel : point plus grand, rempli, avec halo — c'est la
    porte vers une autre section, pas juste un item de liste. */
@@ -557,7 +557,7 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 .stop.featured h3 { color: var(--blue); }
 .stop > .dot { display: none; }
 .event-link {
-  margin-top: 18px;
+  margin-top: auto;
   display: inline-flex; align-items: center; gap: 7px;
   font-size: 13px; font-weight: 600;
   color: var(--paper);
@@ -578,7 +578,7 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   border-top: 1px solid var(--line);
 }
 .note { font-size: 13.5px; line-height: 1.55; color: var(--txt-60); }
-.note strong { color: var(--paper); font-weight: 600; }
+.note strong { color: var(--blue); font-weight: 600; }
 
 @media (max-width: 900px) {
   .section-services { height: auto; }
