@@ -703,14 +703,21 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 }
 
 /* ── Événementiel ───────────────────────────────────────── */
-.section-event { background: var(--navy); color: #fff; }
+.section-event { background: var(--navy); color: #fff; position: relative; }
+.section-event::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(180deg, var(--ink) 0%, transparent 100%);
+  pointer-events: none;
+}
 .section-event .grid-2 { align-items: center; }
 .section-event .spec-row dt { color: rgba(255, 255, 255, 0.62); }
 .van-partner-note {
   margin: 22px 0 0;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.02em;
+  font-size: 13px;
+  letter-spacing: 0.01em;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.58);
 }
