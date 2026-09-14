@@ -619,12 +619,11 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   display: block;
 }
 .veh-tile-wide { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
-.veh-tile span {
-  position: relative;
-  display: inline-block;
-  margin: 16px;
-  font-family: var(--mono); font-size: 11px;
-  letter-spacing: 0.06em; color: rgba(236, 236, 232, 0.5);
+.veh-tile-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  border: 1px dashed var(--line-soft);
+  background: transparent;
+  font-size: 12px; color: var(--txt-42);
 }
 /* Sous 480px, les tuiles empilent en une colonne plutôt que de risquer
    un dernier élément esseulé dans une rangée partiellement remplie. */
@@ -739,7 +738,7 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   color: #fff;
 }
 @media (min-width: 900px) {
-  .section-event .grid-2 { grid-template-columns: 1fr 1fr; }
+  .section-event .grid-2 { grid-template-columns: 1fr 1.15fr; }
   .event-photo { order: 0; }
 }
 
