@@ -703,16 +703,32 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 }
 
 /* ── Événementiel ───────────────────────────────────────── */
-.section-event { background: var(--navy); color: #fff; position: relative; }
+.section-event { background: linear-gradient(165deg, #0D2748 0%, #0A1D38 100%); color: #fff; position: relative; overflow: hidden; }
 .section-event::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 120px;
-  background: linear-gradient(180deg, var(--ink) 0%, transparent 100%);
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--ink) 0%, transparent 120px),
+    linear-gradient(0deg, var(--ink) 0%, transparent 120px);
   pointer-events: none;
 }
-.section-event .grid-2 { align-items: center; }
+.section-event .veh-gallery {
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 14px;
+}
+.section-event .veh-tile-placeholder { border-color: rgba(255, 255, 255, 0.18); }
+.section-event::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 500px at 108% 15%, rgba(111, 168, 216, 0.14), transparent 65%),
+    radial-gradient(ellipse 500px 400px at -6% 92%, rgba(111, 168, 216, 0.10), transparent 65%);
+  pointer-events: none;
+}
+.section-event .grid-2 { position: relative; z-index: 1; }
 .section-event .spec-row dt { color: rgba(255, 255, 255, 0.62); }
 .van-partner-note {
   margin: 22px 0 0;
