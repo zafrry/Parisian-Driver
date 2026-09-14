@@ -451,6 +451,14 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 @media (max-width: 1079px) {
   .section-services { height: calc(100vh - var(--header-h-narrow)); }
 }
+/* Filet de sécurité pour les fenêtres courtes en hauteur (zoom
+   navigateur, portable avec barre de favoris, etc.) : sur ces
+   fenêtres on abandonne le "tient sur un écran" plutôt que de
+   tasser ou tronquer le contenu. */
+@media (max-height: 700px) {
+  .section-services { height: auto; overflow: visible; }
+  .services-inner { height: auto; padding-bottom: 64px; }
+}
 .services-glow {
   position: absolute;
   top: -10%; left: 50%;
@@ -485,7 +493,7 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   flex-direction: column;
 }
 
-.section-services .header-row { flex-shrink: 0; }
+.section-services .header-row { flex-shrink: 0; margin-bottom: clamp(28px, 5vh, 72px); }
 .section-services h2 {
   font-size: clamp(26px, 3vw, 36px);
   line-height: 1.15;
