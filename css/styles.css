@@ -838,7 +838,11 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  min-height: 875px;
+  /* Hauteur de repli avant que le widget ne signale sa taille réelle
+     (voir js/main.js) — le contenu variant selon l'étape (une carte
+     apparaît une fois une adresse saisie), une valeur fixe unique
+     laisse toujours un vide sur les étapes courtes. */
+  min-height: 620px;
   background: var(--ink);
   border: 1px solid var(--line-soft);
   border-radius: 14px;
@@ -859,7 +863,7 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   z-index: 1;
   display: block;
   width: 100%;
-  height: 875px;
+  height: 620px;
   border: 0;
   opacity: 0;
   transition: opacity .35s ease;
