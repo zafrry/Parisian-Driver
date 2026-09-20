@@ -896,6 +896,16 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 #contact-done .link-arrow { margin-top: 22px; }
 
 /* ── À propos ───────────────────────────────────────────── */
+#apropos { position: relative; overflow: hidden; }
+#apropos::before {
+  content: "";
+  position: absolute;
+  top: -10%; left: -8%;
+  width: 650px; height: 500px;
+  background: radial-gradient(ellipse at center, rgba(47, 102, 144, 0.14), transparent 65%);
+  pointer-events: none;
+}
+#apropos .container { position: relative; z-index: 1; }
 .about-head {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
