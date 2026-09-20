@@ -888,6 +888,12 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 }
 .booking-embed-frame iframe.is-loaded { opacity: 1; }
 
+/* Le calendrier Google (Contact) a sa propre interface blanche, contrairement
+   au module ClickChauffeur (Réservation) qui est déjà sombre — le fond noir
+   par défaut du cadre restait visible en bordure/derrière le widget. */
+#contact .booking-embed-frame { background: #fff; }
+#contact .booking-embed-loading { color: rgba(12, 35, 64, 0.55); }
+
 .check-mark {
   width: 44px; height: 44px;
   border: 1px solid var(--blue);
