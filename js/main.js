@@ -111,6 +111,30 @@
     if (p && typeof p.catch === 'function') p.catch(function () {}); // autoplay refusé : poster affiché
   })();
 
+  /* ── Hauteur du module de réservation (ClickChauffeur) ───
+     Le contenu du widget varie selon l'étape (ex : une carte
+     apparaît une fois une adresse saisie) ; on ajuste la hauteur
+     de l'iframe au message envoyé par le widget plutôt que de
+     garder une valeur fixe qui laisse un vide sur les étapes
+     courtes. La valeur CSS reste un repli si le widget n'envoie
+     jamais de message. */
+  (function () {
+    var iframe = document.getElementById('booking-iframe');
+    if (!iframe) return;
+    window.addEventListener('message', function (e) {
+      if (!iframe.contentWindow || e.source !== iframe.contentWindow) return;
+      var data = e.data;
+      var height = null;
+      if (typeof data === 'number') {
+        height = data;
+      } else if (data && typeof data === 'object') {
+        if (typeof data.height === 'number') height = data.height;
+        else if (typeof data.frameHeight === 'number') height = data.frameHeight;
+      }
+      if (height && height > 0) iframe.style.height = height + 'px';
+    });
+  })();
+
   /* ── Année du footer ─────────────────────────────────── */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
