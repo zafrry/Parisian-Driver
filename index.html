@@ -351,7 +351,6 @@
   <section id="contact" class="section" data-screen-label="Contact">
     <div class="container grid-2 grid-2-top">
       <div>
-        <div class="kicker">Contact</div>
         <h2>Un devis, une question, un événement</h2>
         <p class="lead">Pour tout ce qui ne rentre pas dans le formulaire de réservation : devis événementiel, trajet sur mesure, mise à disposition longue durée.</p>
         <dl class="spec-list">
@@ -363,46 +362,21 @@
       </div>
 
       <div class="form-panel">
-        <form id="contact-form" class="contact-step" novalidate>
-          <div class="panel-title panel-title-line">Écrire au chauffeur</div>
-          <div class="field-grid">
-            <div class="field-row-2">
-              <label class="field">
-                <span class="field-label">Nom</span>
-                <input name="name" placeholder="Camille Léger" required>
-              </label>
-              <label class="field">
-                <span class="field-label">Téléphone</span>
-                <input name="phone" placeholder="06 12 34 56 78" required>
-              </label>
-            </div>
-            <label class="field">
-              <span class="field-label">Email</span>
-              <input type="email" name="email" placeholder="camille@exemple.fr" required>
-            </label>
-            <label class="field">
-              <span class="field-label">Sujet</span>
-              <select name="subject">
-                <option>Devis événementiel</option>
-                <option>Trajet longue distance</option>
-                <option>Mise à disposition</option>
-                <option>Autre demande</option>
-              </select>
-            </label>
-            <label class="field">
-              <span class="field-label">Votre demande</span>
-              <textarea name="msg" rows="4" placeholder="Mariage le 12 juin, mairie du 11e puis réception à Fontainebleau…" required></textarea>
-            </label>
+        <div class="panel-title panel-title-line">Prendre rendez-vous</div>
+        <div class="booking-embed">
+          <div class="booking-embed-frame" style="min-height:600px;">
+            <span class="booking-embed-loading">Chargement du calendrier…</span>
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3HlcAl94Go7XtCHb0XJFkUY_qFTdd92czQe9fCdqvmj1hQX--WJqNCb8H-gNIyCq4_nx4_GjYd?gv=true"
+              title="Prendre rendez-vous avec Parisian Driver"
+              width="100%"
+              height="600"
+              frameborder="0"
+              onload="this.classList.add('is-loaded'); this.previousElementSibling.classList.add('hidden')"
+            ></iframe>
           </div>
-          <button type="submit" class="btn-primary btn-block">Envoyer ma demande</button>
-        </form>
-
-        <div class="contact-step hidden" id="contact-done">
-          <div class="check-mark">✓</div>
-          <div class="done-title done-title-sm">Message envoyé</div>
-          <p class="done-p">Réponse du chauffeur sous 2 h en journée. Pour une demande urgente, WhatsApp reste le plus rapide.</p>
-          <button type="button" class="link-arrow" id="contact-reset">Écrire un autre message</button>
         </div>
+        <p class="form-hint">Un souci pour afficher le calendrier ? <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3HlcAl94Go7XtCHb0XJFkUY_qFTdd92czQe9fCdqvmj1hQX--WJqNCb8H-gNIyCq4_nx4_GjYd?gv=true" target="_blank" rel="noopener">Ouvrez-le dans un nouvel onglet</a>, ou <a href="https://wa.me/33689198683" target="_blank" rel="noopener">écrivez sur WhatsApp</a>.</p>
       </div>
     </div>
   </section>
