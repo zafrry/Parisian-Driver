@@ -782,12 +782,13 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 /* ── Réservation & steps ────────────────────────────────── */
 .steps { margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
 .step { display: flex; gap: 12px; align-items: flex-start; }
-.step-num { font-family: var(--mono); font-size: 11px; color: var(--txt-42); padding-top: 3px; flex: none; }
+.step-num { font-size: 13px; font-weight: 600; color: var(--blue); padding-top: 3px; flex: none; }
 .step > span:last-child { font-size: 15px; color: rgba(236, 236, 232, 0.86); }
 
 .form-panel {
   background: var(--surface);
   border: 1px solid var(--line-soft);
+  border-radius: 18px;
   padding: clamp(22px, 3vw, 38px);
   min-width: 0;
 }
@@ -798,7 +799,7 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 }
 .panel-title { font-size: 18px; font-weight: 600; letter-spacing: -0.015em; }
 .panel-title-line { display: block; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
-.panel-step { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--txt-42); }
+.panel-step { font-size: 12.5px; letter-spacing: 0.02em; color: var(--txt-42); }
 
 .field-grid { display: grid; gap: 16px; margin-top: 22px; }
 .field { display: block; min-width: 0; }
@@ -837,18 +838,19 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  min-height: 950px;
+  min-height: 875px;
   background: var(--ink);
   border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  overflow: hidden;
 }
 .booking-embed-loading {
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
   padding: 20px;
   text-align: center;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.06em;
+  font-size: 13px;
+  letter-spacing: 0.01em;
   color: var(--txt-42);
 }
 .booking-embed-loading.hidden { display: none; }
@@ -857,7 +859,7 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   z-index: 1;
   display: block;
   width: 100%;
-  height: 950px;
+  height: 875px;
   border: 0;
   opacity: 0;
   transition: opacity .35s ease;
