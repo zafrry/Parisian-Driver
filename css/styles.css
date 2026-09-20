@@ -757,6 +757,8 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   order: 2;
   min-width: 0;
   border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  overflow: hidden;
   background-size: cover;
   background-position: center;
 }
@@ -765,10 +767,10 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
   padding: 10px 14px;
   background: rgba(12, 35, 64, 0.86);
   border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
   backdrop-filter: blur(4px);
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.05em;
+  font-size: 13px;
+  letter-spacing: 0.01em;
   line-height: 1.5;
   color: #fff;
 }
