@@ -785,6 +785,19 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 .step-num { font-size: 13px; font-weight: 600; color: var(--blue); padding-top: 3px; flex: none; }
 .step > span:last-child { font-size: 15px; color: rgba(236, 236, 232, 0.86); }
 
+/* Le module de réservation est bien plus haut que le texte à côté :
+   sans ça, le texte reste planté en haut avec un grand vide noir en
+   dessous pendant tout le scroll du module. On le rend "collant" pour
+   qu'il accompagne la lecture au lieu de rester figé. Desktop only —
+   sur mobile les deux blocs sont empilés, la sticky n'a pas de sens. */
+@media (min-width: 901px) {
+  #reservation .grid-2 > div:first-child {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+    align-self: start;
+  }
+}
+
 .form-panel {
   background: var(--surface);
   border: 1px solid var(--line-soft);
