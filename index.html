@@ -364,27 +364,19 @@
       <div class="form-panel">
         <div class="panel-title panel-title-line">Prendre rendez-vous</div>
         <div class="booking-embed">
-          <!-- Bouton officiel Google Calendar : ouvre le calendrier dans une
-               fenêtre à part plutôt que de l'intégrer en iframe, ce que Google
-               recommande pour ce widget (l'iframe direct restait parfois noir,
-               probablement à cause du blocage des cookies tiers). -->
-          <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-          <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-          <script>
-          (function() {
-            var target = document.currentScript;
-            window.addEventListener('load', function() {
-              calendar.schedulingButton.load({
-                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3HlcAl94Go7XtCHb0XJFkUY_qFTdd92czQe9fCdqvmj1hQX--WJqNCb8H-gNIyCq4_nx4_GjYd?gv=true',
-                color: '#9BB4D8',
-                label: 'Réserver un créneau',
-                target: target,
-              });
-            });
-          })();
-          </script>
+          <div class="booking-embed-frame" style="min-height:600px;">
+            <span class="booking-embed-loading">Chargement du calendrier…</span>
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3HlcAl94Go7XtCHb0XJFkUY_qFTdd92czQe9fCdqvmj1hQX--WJqNCb8H-gNIyCq4_nx4_GjYd?gv=true"
+              title="Prendre rendez-vous avec Parisian Driver"
+              width="100%"
+              height="600"
+              frameborder="0"
+              onload="this.classList.add('is-loaded'); this.previousElementSibling.classList.add('hidden')"
+            ></iframe>
+          </div>
         </div>
-        <p class="form-hint">Le bouton ouvre le calendrier dans une nouvelle fenêtre. Un souci pour l'afficher ? <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3HlcAl94Go7XtCHb0XJFkUY_qFTdd92czQe9fCdqvmj1hQX--WJqNCb8H-gNIyCq4_nx4_GjYd?gv=true" target="_blank" rel="noopener">ouvrez-le directement dans un nouvel onglet</a>, ou <a href="https://wa.me/33689198683" target="_blank" rel="noopener">écrivez sur WhatsApp</a>.</p>
+        <p class="form-hint">Un souci pour afficher le calendrier ? <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3HlcAl94Go7XtCHb0XJFkUY_qFTdd92czQe9fCdqvmj1hQX--WJqNCb8H-gNIyCq4_nx4_GjYd?gv=true" target="_blank" rel="noopener">Ouvrez-le dans un nouvel onglet</a>, ou <a href="https://wa.me/33689198683" target="_blank" rel="noopener">écrivez sur WhatsApp</a>.</p>
       </div>
     </div>
   </section>
