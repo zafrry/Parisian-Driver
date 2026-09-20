@@ -796,6 +796,11 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
     top: calc(var(--header-h) + 24px);
     align-self: start;
   }
+  #contact .grid-2 > div:first-child {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+    align-self: start;
+  }
 }
 
 .form-panel {

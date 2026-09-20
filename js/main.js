@@ -139,23 +139,6 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  /* ── Contact ─────────────────────────────────────────── */
-  var cForm = document.getElementById('contact-form');
-  var cDone = document.getElementById('contact-done');
-  if (cForm) {
-    cForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!cForm.checkValidity()) { cForm.reportValidity(); return; }
-      cForm.classList.add('hidden');
-      cDone.classList.remove('hidden');
-    });
-    document.getElementById('contact-reset').addEventListener('click', function () {
-      cForm.reset();
-      cDone.classList.add('hidden');
-      cForm.classList.remove('hidden');
-    });
-  }
-
   /* ── Modale légale ───────────────────────────────────── */
   var legalDocs = {
     mentions: {
