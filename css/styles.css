@@ -819,29 +819,6 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 .panel-title-line { display: block; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
 .panel-step { font-size: 12.5px; letter-spacing: 0.02em; color: var(--txt-42); }
 
-.field-grid { display: grid; gap: 16px; margin-top: 22px; }
-.field { display: block; min-width: 0; }
-.field-label {
-  display: block; font-family: var(--mono); font-size: 10.5px;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--txt-42); margin-bottom: 8px;
-}
-.field input, .field select, .field textarea {
-  width: 100%;
-  padding: 13px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 2px;
-  background: var(--ink);
-  color: var(--paper);
-  font-size: 15px;
-  color-scheme: dark;
-}
-.field textarea { resize: vertical; }
-.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue); outline: none; }
-.field-row-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 148px), 1fr)); gap: 12px; }
-.field-row-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 118px), 1fr)); gap: 12px; }
-
-.contact-step .btn-primary { margin-top: 22px; }
 .form-hint { margin: 14px 0 0; font-size: 12.5px; line-height: 1.55; color: rgba(236, 236, 232, 0.45); }
 .form-hint a { color: rgba(236, 236, 232, 0.7); text-decoration: underline; text-underline-offset: 2px; }
 .form-hint a:hover { color: var(--blue); }
@@ -894,18 +871,6 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 #contact .booking-embed-frame { background: #fff; }
 #contact .booking-embed-loading { color: rgba(12, 35, 64, 0.55); }
 
-.check-mark {
-  width: 44px; height: 44px;
-  border: 1px solid var(--blue);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--blue); font-size: 20px;
-}
-#contact-done { animation: pd-rise .5s ease both; padding: 16px 0 8px; }
-.done-title { margin-top: 22px; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
-.done-title-sm { font-size: 20px; }
-.done-p { margin: 14px 0 0; font-size: 15.5px; line-height: 1.65; color: var(--txt-60); max-width: 38ch; }
-#contact-done .link-arrow { margin-top: 22px; }
-
 /* ── À propos ───────────────────────────────────────────── */
 #apropos { position: relative; overflow: hidden; }
 #apropos::before {
@@ -951,7 +916,7 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 .footer-grid > div { min-width: 0; }
 .brand-static { cursor: default; }
 .footer-about { margin: 20px 0 0; font-size: 14px; line-height: 1.6; color: var(--txt-60); max-width: 30ch; }
-.footer-col-title { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--txt-42); }
+.footer-col-title { font-size: 12.5px; letter-spacing: 0.02em; color: var(--txt-42); }
 .footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: 11px; margin-top: 18px; }
 .footer-links button, .footer-links a {
   text-align: left; background: none; border: 0; padding: 0;
@@ -961,15 +926,14 @@ h2 { font-size: clamp(27px, 3.4vw, 48px); line-height: 1.07; }
 .footer-muted { font-size: 14.5px; color: rgba(236, 236, 232, 0.38); }
 .footer-vtc {
   margin: 14px 0 0;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.03em;
+  font-size: 13px;
+  letter-spacing: 0.01em;
   color: rgba(236, 236, 232, 0.55);
 }
 .footer-bottom {
   display: flex; flex-wrap: wrap; justify-content: space-between;
   gap: 10px 24px; padding-top: 22px;
-  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; color: rgba(236, 236, 232, 0.4);
+  font-size: 13px; letter-spacing: 0.01em; color: rgba(236, 236, 232, 0.4);
 }
 
 /* ── Mobile bottom bar ──────────────────────────────────── */
